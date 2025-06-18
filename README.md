@@ -45,7 +45,7 @@ EcoSphere is a clean, interactive platform that promotes eco-conscious retailing
 
 2. Waste Analytics Page Demo
 <p align="center">
-<img src="EcoSphere/assets/analytics_page.png" width="1000" alt="Analytics Page">
+<img src="EcoSphere/assets/analytics-page.png" width="1000" alt="Analytics Page">
 </p>
 
 ---
