@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Redistribution | EcoSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <img src="assets/ecosphere_logo.png" alt="EcoSphere Logo" class="logo-img" />
+      <div class="title-container">
+        <h1 class="glow">EcoSphere</h1>
+        <p class="tagline">Retail with Purpose 🌱 — Smart Surplus Redistribution</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="eco_packaging.html">Eco Packaging</a></li>
+      <li><a href="inventory_redistribution.html">Inventory Redistribution</a></li>
+      <li><a href="waste_analytics.html">Waste Analytics</a></li>
+      <li><a href="related_work.html">Related Work</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- INFO SECTION -->
+  <div class="content-section">
+    <h1>Smart Inventory Redistribution</h1>
+    <p>
+      Surplus products can be intelligently rerouted to areas with high demand. This reduces waste, optimizes sales, and promotes sustainability. 
+      EcoSphere identifies hotspots and suggests efficient redistribution strategies.
+    </p>
+  </div>
+
+  <!-- CHART SECTION -->
+  <div class="content-section">
+    <canvas id="inventoryChart" width="600" height="350"></canvas>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 EcoSphere | Smarter Retail for a Greener Tomorrow</p>
+  </footer>
+
+  <!-- CHART SCRIPT -->
+  <script>
+    const ctx = document.getElementById('inventoryChart').getContext('2d');
+    const inventoryChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Pune'],
+        datasets: [
+          {
+            label: 'Surplus Stock (units)',
+            data: [300, 250, 400, 180, 200],
+            backgroundColor: '#00e676'
+          },
+          {
+            label: 'Demand (units)',
+            data: [150, 300, 200, 300, 270],
+            backgroundColor: '#00796b'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { color: '#e0e0e0' },
+            grid: { color: '#333' }
+          },
+          x: {
+            ticks: { color: '#e0e0e0' },
+            grid: { color: '#333' }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#e0e0e0' }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

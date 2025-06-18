@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco Packaging | EcoSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <img src="assets/ecosphere_logo.png" alt="EcoSphere Logo" class="logo-img" />
+      <div class="title-container">
+        <h1 class="glow">EcoSphere</h1>
+        <p class="tagline">Retail with Purpose 🌱 — Enabling Sustainable Decisions</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="eco_packaging.html">Eco Packaging</a></li>
+      <li><a href="inventory_redistribution.html">Inventory Redistribution</a></li>
+      <li><a href="waste_analytics.html">Waste Analytics</a></li>
+      <li><a href="related_work.html">Related Work</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN SECTION -->
+  <section class="content-section">
+    <h1>Eco Packaging Impact</h1>
+    <p>
+      Eco-friendly packaging plays a crucial role in reducing retail’s carbon footprint. This chart compares
+      the CO₂ emissions saved by switching from plastic to eco-packaging alternatives across different product categories.
+    </p>
+  </section>
+
+  <!-- CHART -->
+  <section class="content-section">
+    <canvas id="ecoPackagingChart" width="700" height="360"></canvas>
+  </section>
+
+  <!-- EXPLANATION SECTION -->
+  <section class="content-section">
+    <h2>Why It Matters</h2>
+    <p>
+      Packaging waste contributes heavily to landfills and ocean pollution. By adopting biodegradable materials like paper, cloth,
+      and recycled cardboard, retailers can significantly reduce emissions and waste. EcoSphere offers insights to help retailers make
+      these changes efficiently and profitably.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; 2025 EcoSphere | Advancing Greener Packaging Solutions
+  </footer>
+
+  <!-- CHART SCRIPT -->
+  <script>
+    const ctx = document.getElementById('ecoPackagingChart').getContext('2d');
+    const ecoPackagingChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Food Items', 'Apparel', 'Home Goods', 'Electronics', 'Personal Care'],
+        datasets: [
+          {
+            label: 'Plastic Packaging (kg CO₂ per 100 units)',
+            data: [45, 30, 50, 60, 35],
+            backgroundColor: '#ff5252'
+          },
+          {
+            label: 'Eco Packaging (kg CO₂ per 100 units)',
+            data: [20, 10, 22, 30, 15],
+            backgroundColor: '#00e676'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: '#e0e0e0'
+            },
+            grid: {
+              color: '#444'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#e0e0e0'
+            },
+            grid: {
+              color: '#444'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#e0e0e0'
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `${context.dataset.label}: ${context.parsed.y} kg CO₂`;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

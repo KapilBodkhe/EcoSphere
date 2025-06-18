@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waste Analytics | EcoSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <img src="assets/ecosphere_logo.png" alt="EcoSphere Logo" class="logo-img" />
+      <div class="title-container">
+        <h1 class="glow">EcoSphere</h1>
+        <p class="tagline">Retail with Purpose 🌱 — Enabling Sustainable Decisions</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="eco_packaging.html">Eco Packaging</a></li>
+      <li><a href="inventory_redistribution.html">Inventory Redistribution</a></li>
+      <li><a href="waste_analytics.html">Waste Analytics</a></li>
+      <li><a href="related_work.html">Related Work</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="content-section">
+    <h1>Waste Analytics in Retail</h1>
+    <p>
+      Retail waste analytics allows businesses to visualize their waste generation patterns, identify major waste contributors, and take targeted actions.
+      Below are two pie charts: one showcasing types of waste generated, and another reflecting the impact of redistribution initiatives.
+    </p>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="content-section" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 50px;">
+    <div style="max-width: 400px;">
+      <canvas id="wasteTypeChart"></canvas>
+    </div>
+    <div style="max-width: 400px;">
+      <canvas id="impactChart"></canvas>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 EcoSphere | Building a Sustainable Retail Future</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const ctx1 = document.getElementById('wasteTypeChart').getContext('2d');
+    const wasteTypeChart = new Chart(ctx1, {
+      type: 'pie',
+      data: {
+        labels: ['Plastic', 'Organic', 'E-Waste', 'Paper'],
+        datasets: [{
+          data: [45, 30, 15, 10],
+          backgroundColor: ['#00e676', '#00796b', '#ff9800', '#03a9f4']
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Types of Waste Generated',
+            color: '#e0e0e0',
+            font: { size: 18 }
+          },
+          legend: {
+            labels: {
+              color: '#e0e0e0'
+            }
+          }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('impactChart').getContext('2d');
+    const impactChart = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Rescued via Redistribution', 'Wasted'],
+        datasets: [{
+          data: [60, 40],
+          backgroundColor: ['#00c853', '#c62828']
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Impact of Redistribution',
+            color: '#e0e0e0',
+            font: { size: 18 }
+          },
+          legend: {
+            labels: {
+              color: '#e0e0e0'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
