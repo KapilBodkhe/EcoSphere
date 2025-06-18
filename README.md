@@ -38,9 +38,14 @@ EcoSphere is a clean, interactive platform that promotes eco-conscious retailing
 
 ## 📸 Screenshots
 
+1. Home Page Demo
 <p align="center">
-  <img src="assets/demo_home.png" width="400" alt="Home Page">
-  <img src="assets/demo_analytics.png" width="400" alt="Analytics Page">
+  <img src="EcoSphere/assets/home.png" width="1000" alt="Home Page">
+</p>
+
+2. Waste Analytics Page Demo
+<p align="center">
+<img src="EcoSphere/assets/analytics_page.png" width="1000" alt="Analytics Page">
 </p>
 
 ---
