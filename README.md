@@ -67,31 +67,42 @@ EcoSphere is a clean, interactive platform that promotes eco-conscious retailing
    All pages are static and run locally without any dependencies.
 
 3. To demo:
+
 → Use `sample_inventory.csv` on Inventory Redistribution page
+
 → Use `sample_waste_data.csv` on Waste Analytics page
 
 ---
 
 ## 🌟 Why EcoSphere?
 ✓ Encourages responsible retail through education
+
 ✓ Empowers sustainability with real data
+
 ✓ Lightweight & beginner-friendly UI/UX
+
 ✓ Easily extendable for backend integrations in future
 
 ---
 
 ## 👨‍👩‍👧‍👦 Team
 👤 Kapil Bodkhe
+
 👤 Anushka Thakur
+
 📍 Shri Ramdeobaba College of Engineering and Management, Nagpur
-📫 Get in touch: [LinkedIn](https://www.linkedin.com/in/kapilbodkhe4) | [Email](mailto:kapilbodkhe4@gmail.com))
+
+📫 Get in touch: [LinkedIn](https://www.linkedin.com/in/kapilbodkhe4) | [Email](mailto:kapilbodkhe4@gmail.com)
 
 ---
 
 ## ✅ Future Scope
 → Integrate with real-time inventory APIs
+
 → User authentication & role-based dashboards
+
 → AI recommendations for packaging alternatives
+
 → Sustainability score for each retailer
 
 ---
