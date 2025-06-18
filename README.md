@@ -71,11 +71,8 @@ EcoSphere is a clean, interactive platform that promotes eco-conscious retailing
 2. Open index.html in your browser.
    All pages are static and run locally without any dependencies.
 
-3. To demo:
-
-→ Use `sample_inventory.csv` on Inventory Redistribution page
-
-→ Use `sample_waste_data.csv` on Waste Analytics page
+3. Input:
+   Used fixed inputs for demo.
 
 ---
 
